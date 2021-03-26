@@ -1,0 +1,27 @@
+type Post
+  @model
+  @key(
+    name: "postsByUsername"
+    fields: ["username"]
+    queryField: "postsByUsername"
+  )
+  @auth(
+    rules: [
+      { allow: owner, ownerField: "username" }
+      { allow: public, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  title: String!
+  content: String!
+  username: String
+}
+
+type Shoe @model @auth(rules: [{ allow: public, operations: [read] }]) {
+  id: ID!
+  name: String!
+  brand: String!
+  price: Int!
+  link: String
+  categories: [String]!
+}
