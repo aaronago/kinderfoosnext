@@ -1,6 +1,6 @@
 {
     "identityPoolName": "kinderfoosv178b99bf1_identitypool_78b99bf1",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "kinder78b99bf1",
     "userPoolName": "kinderfoosv178b99bf1_userpool_78b99bf1",
     "autoVerifiedAttributes": [

@@ -15,6 +15,7 @@ type Post
   title: String!
   content: String!
   username: String
+  coverImage: String
 }
 
 type Shoe @model @auth(rules: [{ allow: public, operations: [read] }]) {
