@@ -26,3 +26,8 @@ type Shoe @model @auth(rules: [{ allow: public, operations: [read] }]) {
   link: String
   categories: [String]!
 }
+
+enum Category {
+
+}
+["men", "mid", "hiking", "waterproof", "boots", "backpacking", "kayaking", "minimalist", "wide toe box", "zero drop"]
