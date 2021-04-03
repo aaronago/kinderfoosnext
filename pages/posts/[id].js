@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { API, Storage } from 'aws-amplify'
 import { useRouter } from 'next/router'
@@ -31,7 +30,7 @@ export default function Post({ post }) {
       </h1>
       {coverImage && (
         <div style={{ position: 'relative', width: '300px', height: '500px' }}>
-          <Image
+          <img
             alt="Mountains"
             src={coverImage}
             layout="fill"
