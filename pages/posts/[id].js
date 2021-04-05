@@ -1,9 +1,8 @@
-import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { API, Storage } from 'aws-amplify'
 import { useRouter } from 'next/router'
 import ReactMarkdown from 'react-markdown'
-import '../../configureAmplify'
+
 import { listPosts, getPost } from '../../graphql/queries'
 
 export default function Post({ post }) {
@@ -31,7 +30,7 @@ export default function Post({ post }) {
       </h1>
       {coverImage && (
         <div style={{ position: 'relative', width: '300px', height: '500px' }}>
-          <Image
+          <img
             alt="Mountains"
             src={coverImage}
             layout="fill"
@@ -56,7 +55,7 @@ export async function getStaticPaths() {
   }))
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
 
