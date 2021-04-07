@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { API, Storage } from 'aws-amplify'
 import { listPosts } from '../graphql/queries'
 
@@ -9,7 +10,13 @@ const Home = ({ posts }) => (
       <Link key={post.id} href={`/posts/${post.id}`}>
         <div className="my-6 pb-6 border-b border-gray-300">
           {post.coverImage && (
-            <img src={post.coverImage} className="w-56" alt="cover" />
+            <Image
+              src={post.coverImage}
+              className="w-56"
+              alt="cover"
+              width={200}
+              height={200}
+            />
           )}
           <div className="cursor-pointer mt-2">
             <h2 className="text-xl font-semibold">{post.title}</h2>
@@ -18,6 +25,7 @@ const Home = ({ posts }) => (
         </div>
       </Link>
     ))}
+    d
   </div>
 )
 
